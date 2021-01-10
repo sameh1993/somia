@@ -658,6 +658,10 @@ ol {
   border-color: #7450fe !important;
 }
 
+.clearfix {
+  clear: both !important;
+}
+
 .login-btn:hover,
 .login-btn:focus {
   color: #fff;

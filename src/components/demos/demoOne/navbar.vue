@@ -59,6 +59,10 @@
   background-color: #281b87;
   position: fixed;
 
+  .btn {
+    line-height: 1.9 !important;
+  }
+
   @include minScreen(lg) {
     padding: 7px 0;
   }

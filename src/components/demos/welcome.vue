@@ -84,6 +84,7 @@
 
 .welcome_area {
   min-height: 100vh;
+  overflow: hidden;
   @include maxScreen(lg) {
     .welcome-content h1 {
       font-size: 29px !important;

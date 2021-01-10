@@ -20,7 +20,7 @@
 
     <div class="clearfix"></div>
     <!-- start OurServices section -->
-    <OurServices></OurServices>
+    <OurServices class="clearfix"></OurServices>
 
     <!-- start roadmap section -->
     <road-map></road-map>
