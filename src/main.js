@@ -14,17 +14,17 @@ import "../node_modules/font-awesome/css/font-awesome.min.css";
 // import vue minified
 import "../node_modules/vue/dist/vue.min";
 
-// import global css files
-import "./assets/css/responsive.css";
-import "./assets/css/style.css";
-
 // to include bootstrap  files globally
 import "bootstrap";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.min.js";
 
+// import global css files
+import "./assets/css/responsive.css";
+import "./assets/css/style.css";
+
 // include animate library
-import "@/assets/css/animate.css";
+// import "@/assets/css/animate.css";
 
 new Vue({
   router,

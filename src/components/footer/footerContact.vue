@@ -36,12 +36,14 @@
         </div>
         <div class="col-12 col-md-7">
           <!-- Content Info -->
-          <div class="contact_info_area d-sm-flex justify-content-between">
+          <div
+            class="contact_info_area d-sm-flex justify-content-between mt-25"
+          >
             <div
               class="contact_info text-center wow fadeInUp mt-25"
               data-wow-delay="0.2s"
             >
-              <h5>NAVIGATE</h5>
+              <h5 class="text-white">NAVIGATE</h5>
               <a href=""><p>Advertisers</p></a>
               <a href=""><p>Developers</p></a>
               <a href=""><p>Resources</p></a>
@@ -53,7 +55,7 @@
               class="contact_info text-center wow fadeInUp mt-25"
               data-wow-delay="0.3s"
             >
-              <h5>PRIVACY & TOS</h5>
+              <h5 class="text-white">PRIVACY & TOS</h5>
               <a href=""><p>Advertiser Agreement</p></a>
               <a href=""><p>Acceptable Use Policy</p></a>
               <a href=""><p>Privacy Policy</p></a>
@@ -65,7 +67,7 @@
               class="contact_info text-center wow fadeInUp mt-25"
               data-wow-delay="0.4s"
             >
-              <h5>Phone</h5>
+              <h5 class="white-text">Phone</h5>
               <p>Mailing Address:xx00 E. Union Ave</p>
               <p>Suite 1100. Denver, CO 80237</p>
               <p>+999 90932 627</p>
@@ -83,6 +85,9 @@
 
 .footer-content-area {
   background-image: url("../../assets/img/core-img/footer-bg1.png");
+  h5 {
+    color: #fff !important;
+  }
 
   @include maxScreen(lg) {
     .mt-25 {
@@ -97,5 +102,9 @@
 .footer-content-area .footer-logo a {
   font-weight: 600;
   letter-spacing: 1px;
+}
+
+.contact_info_area .contact_info h5 {
+  color: #fff !important;
 }
 </style>

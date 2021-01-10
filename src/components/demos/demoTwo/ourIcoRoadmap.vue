@@ -194,6 +194,6 @@
 
 <style scoped>
 .roadmap {
-  background: #010111;
+  background: #010111 !important;
 }
 </style>

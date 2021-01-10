@@ -32,7 +32,7 @@
             <div class="service_icon">
               <img :src="item.img" alt="" />
             </div>
-            <h6>{{ item.title }}</h6>
+            <h6 class="text-white">{{ item.title }}</h6>
             <p>
               {{ item.para }}
             </p>
@@ -48,7 +48,7 @@
 <style lang="scss">
 .service_icon {
   h6 {
-    color: #fff;
+    color: #fff !important;
   }
 }
 </style>

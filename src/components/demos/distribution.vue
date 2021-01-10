@@ -20,7 +20,7 @@
 
       <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-12">
-          <h2 class="text-center mb-30">Token Allocation</h2>
+          <h2 class="text-center mb-30 text-white">Token Allocation</h2>
           <div class="token-allocation">
             <img
               src="@/assets/img/core-img/allocation.png"
@@ -31,7 +31,7 @@
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12">
           <div class="token-info-wapper"></div>
-          <h2 class="text-center mb-30">More Token Info</h2>
+          <h2 class="text-center mb-30 text-white">More Token Info</h2>
           <div class="token-info">
             <div class="info-wrapper">
               <div

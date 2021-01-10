@@ -48,6 +48,11 @@
     .row > div {
       margin-top: 25px;
     }
+    h6 {
+      color: #fff;
+      font-weight: normal;
+      letter-spacing: 1px;
+    }
   }
 }
 </style>

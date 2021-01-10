@@ -37,7 +37,7 @@
             </ul>
 
             <!-- Button -->
-            <a href="#" class="btn login-btn ml-15">Log in</a>
+            <a href="#" class="btn login-btn ml-2">Log in</a>
           </div>
           <!-- Nav End -->
         </div>
@@ -46,28 +46,31 @@
   </div>
 </template>
 
-<style scoped>
-.classyNav {
-  background-color: #192a56;
-}
+<style lang="scss">
+@import "@/assets/_Rules.scss";
 .classy-navbar-toggler .navbarToggler span {
   background-color: #fff;
 }
-</style>
-
-<style scoped>
-@import "../../../assets/css/animate.css";
 #nav {
   margin-bottom: 0 !important;
 }
 
 .classy-nav-container {
   background-color: #281b87;
+  position: fixed;
+
+  @include minScreen(lg) {
+    padding: 7px 0;
+  }
 }
 
 .bg-transparent {
   background-color: transparent;
   transition: all 0.5s linear;
+}
+
+.bg-fixed {
+  background-color: #281b87 !important;
 }
 
 .classy-nav-container a {
@@ -78,9 +81,6 @@
 <script>
 const $ = require("jquery");
 window.$ = window.jQuery = $;
-
-import "../../../assets/js/animated";
-import "../../../assets/js/wow.min.js";
 
 export default {
   mounted() {
@@ -93,12 +93,22 @@ export default {
       );
     });
 
+    // toggle class active menu in mobile section
     $(".classy-navbar-toggler").click(function () {
       $(".classy-menu").toggleClass("menu-on");
     });
 
+    // hidden the menu in mobile section
     $(".classycloseIcon .cross-wrap").click(function () {
       $(".classy-menu").removeClass("menu-on");
+    });
+
+    $(window).scroll(function () {
+      if ($(window).scrollTop() >= 100) {
+        $(".classy-nav-container").addClass("bg-fixed");
+      } else {
+        $(".classy-nav-container").removeClass("bg-fixed");
+      }
     });
   },
 };

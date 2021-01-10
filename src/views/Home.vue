@@ -1,24 +1,17 @@
 <template>
   <div class="home">
-    <!-- start welcome comp -->
-    <welcome-comp></welcome-comp>
-
-    <!-- start inner page -->
-    <inner-page></inner-page>
+    <!-- start choose demo -->
+    <choose-demo></choose-demo>
   </div>
 </template>
 
+
 <script>
-import InnerPage from "../components/body/home/inner-page.vue";
-import welcomeComp from "../components/body/home/welcome-comp.vue";
+import ChooseDemo from "@/components/home/chooseDemo.vue";
 
 export default {
-  data() {
-    return {};
-  },
   components: {
-    welcomeComp,
-    InnerPage,
+    ChooseDemo,
   },
 };
 </script>
