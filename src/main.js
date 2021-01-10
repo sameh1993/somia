@@ -23,8 +23,10 @@ import "../node_modules/bootstrap/dist/js/bootstrap.min.js";
 import "./assets/css/responsive.css";
 import "./assets/css/style.css";
 
-// include animate library
-// import "@/assets/css/animate.css";
+// We import JQuery
+const $ = require("jquery");
+// We declare it globally
+window.$ = $;
 
 new Vue({
   router,

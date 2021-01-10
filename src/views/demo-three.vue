@@ -21,6 +21,7 @@
     <!-- start Watch our demo -->
     <WatchOurDemo></WatchOurDemo>
 
+    <div class="clearfix"></div>
     <!-- start OurServices section -->
     <OurServices></OurServices>
 

@@ -26,7 +26,7 @@
           </div>
 
           <!-- Nav Start -->
-          <div class="classynav">
+          <div class="classynav menu-on">
             <ul id="nav" class="mb-0">
               <li><a href="#home">Home</a></li>
               <li><a href="#about">About</a></li>
@@ -61,6 +61,32 @@
 
   @include minScreen(lg) {
     padding: 7px 0;
+  }
+  @include maxScreen(lg) {
+    .classy-menu {
+      background-color: #192a56;
+      flex-direction: column;
+    }
+    .classynav > ul > li {
+      background-color: transparent;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .classynav > ul > li > a {
+      background: transparent;
+    }
+    .classynav {
+      align-items: stretch !important;
+      flex-direction: column !important;
+    }
+
+    .classynav > a {
+      width: 110px;
+      margin-left: 20px;
+    }
+
+    .cross-wrap span {
+      background-color: #fff;
+    }
   }
 }
 

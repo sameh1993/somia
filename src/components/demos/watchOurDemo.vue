@@ -43,7 +43,6 @@
 @import "@/assets/_Rules.scss";
 
 section {
-  overflow: hidden;
   .video-icon i {
     font-size: 25px;
     margin-top: 14px;

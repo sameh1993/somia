@@ -655,7 +655,7 @@ ol {
   border-radius: 50px;
   border: 2px solid;
   letter-spacing: 1px;
-  border-color: #7450fe;
+  border-color: #7450fe !important;
 }
 
 .login-btn:hover,
