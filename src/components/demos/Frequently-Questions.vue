@@ -115,7 +115,7 @@
                           <div class="tab-metr tab-unit">minutes</div>
                         </div>
                         <div class="table-cell second">
-                          <div class="tab-val" style="opacity: 1">10</div>
+                          <div class="tab-val" style="opacity: 1">5</div>
                           <div class="tab-metr tab-unit">seconds</div>
                         </div>
                       </div>
@@ -195,45 +195,21 @@ global.jQuery = require("jquery");
 const $ = global.jQuery;
 window.$ = $;
 
+import "../../assets/js/jquery.syotimer.min.js";
+
 export default {
   mounted() {
-    $("dt").click(function() {
-      $(this)
-        .next("dd")
-        .slideDown("400")
-        .siblings("dd")
-        .slideUp(400);
+    $("dt").click(function () {
+      $(this).next("dd").slideDown("400").siblings("dd").slideUp(400);
     });
 
-    var secondVal = $(".second .tab-val").text(),
-      devSecond = $(".second .tab-val");
-
-    var minDiv = $(".minute .tab-val"),
-      minValue = minDiv.html();
-
-    var hourDiv = $(".hour .tab-val"),
-      hourValue = hourDiv.html();
-
-    setInterval(function() {
-      if (secondVal > 0) {
-        secondVal = secondVal - 1;
-        devSecond.html(secondVal);
-      } else {
-        secondVal = 60;
-        if (minValue > 0) {
-          minValue = minValue - 1;
-          minDiv.html(minValue);
-        } else {
-          minDiv.html(60);
-          if (hourValue > 0) {
-            hourValue = hourValue - 1;
-            hourDiv.html(hourValue);
-          } else {
-            hourValue = 24;
-          }
-        }
-      }
-    }, 1000);
+    $(".simple_timer").syotimer({
+      year: 2025,
+      month: 9,
+      day: 9,
+      hour: 20,
+      minute: 30,
+    });
   },
 };
 </script>
