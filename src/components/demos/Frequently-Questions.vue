@@ -98,10 +98,7 @@
                                         </div>
                                     </div> -->
                   <!-- Countdown  -->
-                  <div
-                    v-if="$route.name == 'demoThree'"
-                    class="count-down titled circled text-center"
-                  >
+                  <div class="count-down titled circled text-center">
                     <div class="simple_timer syotimer timer">
                       <div class="timer-head-block"></div>
                       <div class="timer-body-block">
@@ -114,11 +111,11 @@
                           <div class="tab-metr tab-unit">hours</div>
                         </div>
                         <div class="table-cell minute">
-                          <div class="tab-val">08</div>
+                          <div class="tab-val">01</div>
                           <div class="tab-metr tab-unit">minutes</div>
                         </div>
                         <div class="table-cell second">
-                          <div class="tab-val" style="opacity: 1">34</div>
+                          <div class="tab-val" style="opacity: 1">10</div>
                           <div class="tab-metr tab-unit">seconds</div>
                         </div>
                       </div>
@@ -200,9 +197,43 @@ window.$ = $;
 
 export default {
   mounted() {
-    $("dt").click(function () {
-      $(this).next("dd").slideDown("400").siblings("dd").slideUp(400);
+    $("dt").click(function() {
+      $(this)
+        .next("dd")
+        .slideDown("400")
+        .siblings("dd")
+        .slideUp(400);
     });
+
+    var secondVal = $(".second .tab-val").text(),
+      devSecond = $(".second .tab-val");
+
+    var minDiv = $(".minute .tab-val"),
+      minValue = minDiv.html();
+
+    var hourDiv = $(".hour .tab-val"),
+      hourValue = hourDiv.html();
+
+    setInterval(function() {
+      if (secondVal > 0) {
+        secondVal = secondVal - 1;
+        devSecond.html(secondVal);
+      } else {
+        secondVal = 60;
+        if (minValue > 0) {
+          minValue = minValue - 1;
+          minDiv.html(minValue);
+        } else {
+          minDiv.html(60);
+          if (hourValue > 0) {
+            hourValue = hourValue - 1;
+            hourDiv.html(hourValue);
+          } else {
+            hourValue = 24;
+          }
+        }
+      }
+    }, 1000);
   },
 };
 </script>

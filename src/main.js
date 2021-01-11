@@ -23,6 +23,9 @@ import "../node_modules/bootstrap/dist/js/bootstrap.min.js";
 import "./assets/css/responsive.css";
 import "./assets/css/style.css";
 
+// import filter 
+import './filters.js';
+
 // We import JQuery
 const $ = require("jquery");
 // We declare it globally
