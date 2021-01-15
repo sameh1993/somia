@@ -23,13 +23,21 @@ import "../node_modules/bootstrap/dist/js/bootstrap.min.js";
 import "./assets/css/responsive.css";
 import "./assets/css/style.css";
 
-// import filter 
-import './filters.js';
+// import filter
+import "./filters.js";
 
 // We import JQuery
-const $ = require("jquery");
+const jquery = require("jquery");
 // We declare it globally
-window.$ = $;
+window.$ = jquery;
+
+// import wow library globally
+// import vWow from "v-wow";
+// Vue.use(vWow);
+
+import "./assets/css/animate.css";
+
+import "wow.js"
 
 new Vue({
   router,

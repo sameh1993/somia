@@ -8,7 +8,7 @@
 
     <!-- ##### Footer Area Start ##### -->
     <footer>
-      <!-- start contact us -->
+      <!-- start contact us section -->
       <footer-contact></footer-contact>
     </footer>
     <!-- ##### Footer Area End ##### -->
@@ -23,11 +23,14 @@ header {
 </style>
 
 <script>
-import FooterContact from "./components/footer/footerContact.vue";
-
-import jquery from "jquery";
-const $ = jquery;
+const $ = require("jquery");
+// We declare it globally
 window.$ = $;
+
+
+import WOW from 'wow.js'
+
+import FooterContact from "./components/footer/footerContact.vue";
 
 export default {
   components: {
@@ -52,6 +55,9 @@ export default {
         1000
       );
     });
+
+    new WOW().init();
+
   },
   beforeMount() {
     $("#preloader")

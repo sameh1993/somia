@@ -60,7 +60,7 @@
   position: fixed;
 
   .btn {
-    line-height: 1.9 !important;
+    line-height: 2.7 !important;
   }
 
   @include minScreen(lg) {
